@@ -1,10 +1,9 @@
 import "./App.css";
+import { Card } from "./components/Card/Card"
 
 function App() {
   return (
-    <div className="container mx-auto my-10">
-      <button className="btn">Hello daisyUI</button>
-    </div>
+    <Card />
   );
 }
 
