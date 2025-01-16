@@ -1,9 +1,11 @@
-import { PrimaryButton } from "../Button/PrimaryButton"
 import { CardImg } from "./CardImg"
 
+// Version pour montrer comment faire de la composition
+
 type Props = {
+    children: React.ReactNode // Permet de faire de la composition de composant
+    action: React.ReactNode[]
     title: string
-    description: string
     buttonTxt: string
 }
 
@@ -13,9 +15,11 @@ export function Card(props: Props) {
             <CardImg />
             <div className="card-body">
                 <h2 className="card-title">{props.title}</h2>
-                <p>{props.description}</p>
+                <p>
+                    {props.children}
+                </p>
                 <div className="card-actions justify-end">
-                    <PrimaryButton txt={props.buttonTxt} />
+                    {props.action}
                 </div>
             </div>
         </div>
