@@ -1,3 +1,9 @@
-export function PrimaryButton() {
-    return <button className="btn btn-primary">Buy Now</button>
+type Props = {
+    txt: string
+}
+
+export function PrimaryButton(props: Props) {
+    return <button className="btn btn-primary">
+        {props.txt}
+    </button>
 }
